@@ -3,16 +3,10 @@ pipeline {
 
     stages {
 
-        stage('Build') {
+        stage('Build and Test') {
             steps {
                 sh 'chmod +x mvnw'
                 sh './mvnw clean package'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                sh './mvnw test'
             }
         }
 
