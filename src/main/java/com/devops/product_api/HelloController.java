@@ -11,5 +11,8 @@ public class HelloController {
          return "Hello DevOps CI/CD Pipeline";
     }
 
+@GetMapping("/status")
+    public String status() {
+        return "Application running";
+    }
 }
-
