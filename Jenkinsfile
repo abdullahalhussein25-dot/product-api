@@ -1,4 +1,5 @@
-pipeline {
+
+      pipeline {
     agent any
 
     stages {
@@ -10,19 +11,25 @@ pipeline {
             }
         }
 
+        stage('Clean Docker') {
+            steps {
+                sh 'docker stop product-api-container || true'
+                sh 'docker rm product-api-container || true'
+                sh 'docker rmi product-api || true'
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t product-api .'
+                sh 'docker build --no-cache -t product-api .'
             }
         }
 
         stage('Run Docker Container') {
             steps {
-                sh 'docker stop product-api-container || true'
-                sh 'docker rm product-api-container || true'
                 sh 'docker run -d --name product-api-container -p 8081:8080 product-api'
             }
         }
 
     }
-}
+} 
