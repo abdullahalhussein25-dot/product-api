@@ -1,4 +1,5 @@
-pipeline {
+
+      pipeline {
     agent any
 
     stages {
@@ -58,4 +59,4 @@ pipeline {
             echo 'Build oder Deployment fehlgeschlagen'
         }
     }
-}
+} 
