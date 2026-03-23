@@ -13,6 +13,6 @@ public class HelloController {
 
 @GetMapping("/status")
     public String status() {
-        return "Application one ";
+        return "Application one";
     }
 }
