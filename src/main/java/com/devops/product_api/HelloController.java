@@ -13,7 +13,7 @@ public class HelloController {
 
 @GetMapping("/status")
     public String status() {
-        return "Application 6 ";
+        return "Application 6";
     }
 }
 
