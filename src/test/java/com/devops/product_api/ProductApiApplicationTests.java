@@ -16,6 +16,6 @@ class ProductApiApplicationTests {
     void testStatus() {
         HelloController controller = new HelloController();
         String result = controller.status();
-        assertEquals("Application 7", result);
+        assertEquals("Application 8", result);
     }
 }
