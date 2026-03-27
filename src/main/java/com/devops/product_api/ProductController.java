@@ -29,4 +29,13 @@ public class ProductController {
   public void deleteProduct(@PathVariable Long id) {
     productRepository.deleteById(id);
 }
+    @PutMapping("/{id}")
+public Product updateProduct(@PathVariable Long id, @RequestBody Product updatedProduct) {
+    Product product = productRepository.findById(id).orElseThrow();
+
+    product.setName(updatedProduct.getName());
+    product.setPrice(updatedProduct.getPrice());
+
+    return productRepository.save(product);
+}
 }
