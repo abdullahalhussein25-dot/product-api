@@ -46,7 +46,7 @@
 
         stage('Run Docker Container') {
             steps {
-                sh 'docker run -d --name product-api-container -p 8081:8080 product-api'
+               sh 'docker run -d --name product-api-container --network app-network -p 8081:8080 product-api'
             }
         }
     }
