@@ -9,7 +9,7 @@ class ProductApiApplicationTests {
     void testHello() {
         HelloController controller = new HelloController();
         String result = controller.hello();
-        assertEquals("Hello DevOps CI/CD Pipeline10", result);
+        assertEquals("Hello DevOps CI/CD Pipeline11", result);
     } 
 
     @Test
