@@ -8,7 +8,7 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello() {
-         return "Hello DevOps CI/CD Pipeline2";
+         return "Hello DevOps CI/CD Pipeline3";
     }
 
 @GetMapping("/status")
